@@ -4,88 +4,128 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>趣味紹介</title>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #ece9e6, #ffffff);
+      font-family: 'Zen Kaku Gothic New', sans-serif;
+      background: linear-gradient(to right, #fefcea, #f1da36);
       margin: 0;
       padding: 0;
-      color: #333;
+      color: #2d3436;
     }
+
     header {
       background-color: #f9ca24;
-      padding: 2rem;
+      padding: 3rem 1rem;
       text-align: center;
       color: #2f3542;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
     main {
-      max-width: 800px;
-      margin: 2rem auto;
+      max-width: 900px;
+      margin: 3rem auto;
       padding: 2rem;
-      
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
+
     h2 {
-      color: #f9ca24;
-      border-bottom: 2px solid #f9ca24;
+      color: #e1b12c;
+      border-bottom: 2px solid #e1b12c;
       padding-bottom: 0.5rem;
-    }
-    ul {
-      list-style: square;
-      padding-left: 1.5rem;
-    }
-    li {
       margin-bottom: 1.5rem;
-      line-height: 1.6;
     }
-    img {
+
+    .hobby-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .card {
+      background-color: #fff;
+      padding: 1rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
       max-width: 100%;
       height: auto;
-      border-radius: 8px;
-      margin-top: 0.5rem;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      margin-top: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
+
+    .card p {
+      margin-top: 0.5rem;
+      line-height: 1.6;
+    }
+
+    section:last-of-type {
+      margin-top: 4rem;
+      text-align: center;
+      font-size: 1.2rem;
+    }
+
     footer {
       text-align: center;
       font-size: 0.9rem;
-      color: #888;
-      padding: 1rem;
+      color: #555;
+      background-color: #f0f0f0;
+      padding: 1.5rem;
+      margin-top: 4rem;
+      border-top: 1px solid #ccc;
+    }
+
+    @media (max-width: 768px) {
+      .hobby-list {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1> 私の趣味紹介 </h1>
+  <h1>私の趣味紹介</h1>
   <p>私の好きなことを紹介します！</p>
 </header>
 
 <main>
   <section>
     <h2>趣味一覧</h2>
-    <ul>
-      <li>
-        映画鑑賞（特に洋画のホラー映画が好きです）<br>
+    <div class="hobby-list">
+      <div class="card">
+        <h3>映画鑑賞</h3>
+        <p>特に洋画のホラー映画が好きです。</p>
         <img src="horror-movie.jpg" alt="ホラー映画のポスター">
-      </li>
-      <li>
-        フェス参戦<br>
+      </div>
+      <div class="card">
+        <h3>フェス参戦</h3>
+        <p>音楽フェスに行って盛り上がるのが最高です！</p>
         <img src="music-festival.jpg" alt="フェスの様子">
-      </li>
-    </ul>
+      </div>
+    </div>
   </section>
 
   <section>
     <h2>ひとこと</h2>
-    <p>
-      趣味を通じて、たくさんの人と関わるのが大好きです<br>
-    </p>
+    <p>趣味を通じて、たくさんの人と関わるのが大好きです。</p>
   </section>
 </main>
 
 <footer>
-  &copy; 2025 My Hobby Page
+  © 2025 渚の趣味サイト | おしゃれにしてみました！
 </footer>
 
 </body>

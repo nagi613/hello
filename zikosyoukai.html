@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>趣味紹介</title>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* おしゃれカーソル（フリー素材から取得） */
+    body {
+      font-family: 'Zen Kaku Gothic New', sans-serif;
+      background: linear-gradient(to right, #fefcea, #f1da36);
+      margin: 0;
+      padding: 0;
+      color: #2d3436;
+      cursor: url('https://cur.cursors-4u.net/symbols/sym-9/sym890.cur'), auto;
+      animation: fadeInBody 1s ease-in;
+    }
+
+    @keyframes fadeInBody {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    header {
+      background-color: #f9ca24;
+      padding: 3rem 1rem;
+      text-align: center;
+      color: #2f3542;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ヘッダー波模様アニメーション */
+    header::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100%;
+      height: 30px;
+      background: radial-gradient(circle, #f9ca24 20%, transparent 21%);
+      background-size: 30px 30px;
+      animation: wave 3s infinite linear;
+    }
+
+    @keyframes wave {
+      0% { background-position: 0 0; }
+      100% { background-position: 30px 0; }
+    }
+
+    main {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 2rem;
+      animation: fadeInMain 1s ease-in-out;
+    }
+
+    @keyframes fadeInMain {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h2 {
+      color: #e1b12c;
+      border-bottom: 2px solid #e1b12c;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hobby-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .card {
+      background-color: #fff;
+      padding: 1rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.6s ease forwards;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:nth-child(2) {
+      animation-delay: 0.3s;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+      background-color: #fef9e7;
+      cursor: pointer;
+    }
+
+    .card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin-top: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .card p {
+      margin-top: 0.5rem;
+      line-height: 1.6;
+    }
+
+    section:last-of-type {
+      margin-top: 4rem;
+      text-align: center;
+      font-size: 1.2rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+      background-color: #f0f0f0;
+      padding: 1.5rem;
+      margin-top: 4rem;
+      border-top: 1px solid #ccc;
+    }
+
+    @media (max-width: 768px) {
+      .hobby-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>私の趣味紹介</h1>
+  <p>私の好きなことを紹介します！</p>
+</header>
+
+<main>
+  <section>
+    <h2>趣味一覧</h2>
+    <div class="hobby-list">
+      <div class="card">
+        <h3>映画鑑賞</h3>
+        <p>特に洋画のホラー映画が好きです。</p>
+        <img src="horror-movie.jpg" alt="ホラー映画のポスター">
+      </div>
+      <div class="card">
+        <h3>フェス参戦</h3>
+        <p>音楽フェスに行って盛り上がるのが最高です！</p>
+        <img src="music-festival.jpg" alt="フェスの様子">
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>ひとこと</h2>
+    <p>趣味を通じて、たくさんの人と関わるのが大好きです。</p>
+  </section>
+</main>
+
+<footer>
+  © 2025 渚の趣味サイト | おしゃれにしてみました！
+</footer>
+
+</body>
+</html>
